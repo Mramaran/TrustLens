@@ -21,12 +21,6 @@ This project was developed for the **Cryptera Hackathon** by **Hack Elite**.
 
 *Building trust in digital media, one image at a time.*
 
-## UI
-
-https://github.com/user-attachments/assets/04928593-8632-4411-bda0-8b1748fc2ac4
-
-
-
 ## 📋 Project Overview
 **TrustLens** addresses the growing challenge of AI-generated imagery in digital media. Our deep learning system provides:
 
@@ -116,12 +110,12 @@ In today's digital landscape, **TrustLens** serves critical needs:
 The pre-trained models are hosted on Google Drive for easy access. Download the following files and place them in the respective directories:
 
 1. **CNN Model Weights**:
-   - Download `model_weights.weights.h5` from [Google Drive Link](https://drive.google.com/your-link-here)
+   - Download `model_weights.weights.h5` from [Google Drive Link](https://drive.google.com/file/d/1bfm1yhPWIhZ08FXLyQZfVwROcNrAgYxu/view?usp=drive_link)
    - Copy to `CNN_model_weight/` folder
 
 2. **EfficientNet Models**:
-   - Download `efficientnetb3_binary_classifier_8.h5` from [Google Drive Link](https://drive.google.com/your-link-here)
-   - Download `EfficientNet_fine_tune_art_model.h5` from [Google Drive Link](https://drive.google.com/your-link-here)
+   - Download `efficientnetb3_binary_classifier_8.h5` from [Google Drive Link](https://drive.google.com/file/d/1Pfx8NtmYzIifn8xquYcTkV1MGm_6bW-o/view?usp=drive_link)
+   - Download `EfficientNet_fine_tune_art_model.h5` from [Google Drive Link](https://drive.google.com/file/d/1yINXfRDnUNiD43BbtXDkVsMOfe1bnSR9/view?usp=drive_link)
    - Copy to `EfficientNet_Models/` folder
 
 *Note: Replace the placeholder links with the actual Google Drive sharing links for the model files.*

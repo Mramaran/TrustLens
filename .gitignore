@@ -1,0 +1,104 @@
+# ============================================================================
+# TrustLens - AI Image Detection System
+# Git Ignore Configuration
+# Developed by: Hack Elite for Cryptera Hackathon
+# ============================================================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+.virtualenv/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Model Files
+*.h5
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Model files (optional - uncomment if models are too large for git)
+# *.h5
+# *.weights.h5
+# *.pb
+
+# Datasets (usually too large for git)
+datasets/
+data/
+*.csv
+*.zip
+*.tar.gz
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+.pytest_cache/
+
+# OS specific
+Thumbs.db
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Streamlit
+.streamlit/
+
+# Coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+EXTENSION_SETUP.md
+*.h5

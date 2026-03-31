@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "TrustLens - AI Image Detector",
+    "version": "1.0",
+    "description": "Analyze images on the web to detect if they are AI-generated or Real.",
+    "permissions": [
+        "contextMenus",
+        "activeTab",
+        "scripting",
+        "sidePanel"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "side_panel": {
+        "default_path": "popup.html"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+}

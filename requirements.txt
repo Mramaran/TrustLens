@@ -1,0 +1,22 @@
+# ============================================================================
+# TrustLens - AI Image Detection System
+# Developed by: Hack Elite for Cryptera Hackathon
+# ============================================================================
+# Python Dependencies
+# This file lists all required packages with specific versions for reproducibility
+
+# Core Deep Learning Framework
+numpy>=1.26.0,<2.1.0          # Numerical computing library
+tensorflow==2.18.0             # Deep learning framework for model inference
+keras>=3.0.0                   # High-level neural networks API (included with TensorFlow)
+
+# Web Application Framework
+streamlit==1.40.0              # Interactive web application framework
+
+# Image Processing
+Pillow>=10.0.0                 # Python Imaging Library for image manipulation
+
+# Optional: Development Dependencies (uncomment if needed)
+# jupyter>=1.0.0               # Jupyter notebook for experimentation
+# matplotlib>=3.7.0            # Plotting library for visualizations
+# seaborn>=0.12.0              # Statistical data visualization

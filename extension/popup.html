@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrustLens</title>
+  <style>
+    body {
+      width: 350px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0a1628;
+      color: #E0F2FE;
+      margin: 0;
+      padding: 16px;
+    }
+    
+    h1 {
+      font-size: 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #4A90E2 0%, #5BC0DE 50%, #7DD3FC 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-top: 0;
+      margin-bottom: 4px;
+    }
+    
+    .subtitle {
+      text-align: center;
+      font-size: 12px;
+      color: #7DD3FC;
+      margin-bottom: 20px;
+      opacity: 0.8;
+    }
+    
+    .card {
+      background: rgba(30, 58, 95, 0.6);
+      border: 1px solid #2563EB;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    
+    .preview-img {
+      max-width: 100%;
+      max-height: 200px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      display: none;
+      border: 1px solid #3B82F6;
+    }
+    
+    .btn {
+      width: 100%;
+      padding: 10px;
+      background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+    
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+    
+    .btn:disabled {
+      background: #1E3A5F;
+      cursor: not-allowed;
+      transform: none;
+      opacity: 0.7;
+    }
+    
+    .result-box {
+      margin-top: 16px;
+      display: none;
+    }
+    
+    .result-label {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .confidence {
+      font-size: 14px;
+      color: #93C5FD;
+    }
+    
+    .loading {
+      display: none;
+      color: #7DD3FC;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    
+    select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border-radius: 6px;
+        background-color: #1E3A5F;
+        color: white;
+        border: 1px solid #2563EB;
+        outline: none;
+    }
+    
+    p.info {
+        font-size: 11px;
+        color: #94a3b8;
+        text-align: center;
+        margin-top: 12px;
+    }
+
+    .drop-zone {
+        border: 2px dashed #3B82F6;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 12px;
+        color: #93C5FD;
+        font-size: 12px;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+    
+    .drop-zone:hover {
+        background: rgba(37, 130, 246, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>🔍 TrustLens</h1>
+  <div class="subtitle">AI Image Detection System</div>
+  
+  <div class="card">
+    <select id="modelSelect">
+        <option value="cnn">CNN (Fast)</option>
+        <option value="efficientnet">EfficientNet (Accurate)</option>
+        <option value="efficientnet_art">EfficientNet Art (Specialized)</option>
+    </select>
+
+    <div class="drop-zone" id="dropZone">
+        📂 Drop image here or Click to Upload
+        <input type="file" id="fileInput" accept="image/*" style="display: none;">
+    </div>
+    
+    <img id="preview" class="preview-img">
+    
+    <button id="analyzeBtn" class="btn" disabled>Analyze Image</button>
+    
+    <div id="loading" class="loading">Analyzing... Please wait</div>
+    
+    <div id="resultBox" class="result-box">
+      <div id="resultLabel" class="result-label">REAL</div>
+      <div id="confidence" class="confidence">Confidence: 98.5%</div>
+      <button id="backBtn" class="btn" style="margin-top: 12px;">Upload New Image</button>
+    </div>
+  </div>
+  
+  <p class="info">Right-click any image on web pages to analyze quickly.</p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
